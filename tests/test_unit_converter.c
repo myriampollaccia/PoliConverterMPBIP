@@ -16,12 +16,12 @@ void test_fahrenheit_to_celsius() {
 }
 
 void test_kilometers_to_miles() {
-  assert(kilometers_to_miles(1) == 0.621371);
+  assert(fabs(kilometers_to_miles(1) - 0.621371) < EPSILON);
   printf("All kilometers_to_miles tests passed!\n");
 }
 
 void test_miles_to_kilometers() {
-  assert(miles_to_kilometers(0.621371) == 1);
+  assert(fabs(miles_to_kilometers(0.621371) - 1) < EPSILON);
   printf("All miles_to_kilometers tests passed!\n");
 }
 
