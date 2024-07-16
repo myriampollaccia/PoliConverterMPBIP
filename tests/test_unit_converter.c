@@ -11,20 +11,29 @@ void test_celsius_to_fahrenheit() {
 }
 
 void test_fahrenheit_to_celsius() {
+  assert(fabs(fahrenheit_to_celsius(32) - 0) < EPSILON);
   printf("All fahrenheit_to_celsius tests passed!\n");
 }
 
 void test_kilometers_to_miles() {
+  assert(kilometers_to_miles(1) == 0.621371);
   printf("All kilometers_to_miles tests passed!\n");
 }
 
 void test_miles_to_kilometers() {
+  assert(miles_to_kilometers(0.621371) == 1);
   printf("All miles_to_kilometers tests passed!\n");
 }
 
-void test_grams_to_ounces() { printf("All grams_to_ounces tests passed!\n"); }
+void test_grams_to_ounces() {
+  assert(fabs(grams_to_ounces(1) - 0.035274) < EPSILON);
+  printf("All grams_to_ounces tests passed!\n");
+}
 
-void test_ounces_to_grams() { printf("All ounces_to_grams tests passed!\n"); }
+void test_ounces_to_grams() {
+  assert(fabs(ounces_to_grams(0.035274) - 1) < EPSILON);
+  printf("All ounces_to_grams tests passed!\n");
+}
 
 int main() {
   test_celsius_to_fahrenheit();
