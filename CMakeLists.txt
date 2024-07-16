@@ -9,4 +9,6 @@ add_executable(unit_converter src/main.c src/unit_converter.c)
 
 add_executable(test_unit_converter tests/test_unit_converter.c src/unit_converter.c)
 
+enable_testing()
 
+add_test(NAME ConverterTest COMMAND test_unit_converter)
